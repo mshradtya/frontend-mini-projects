@@ -36,7 +36,7 @@ const firstDay = new Date(new Date().getFullYear(), monthInx, 1).getDay() - 1;
 console.log(firstDay);
 
 for (let i = 0; i<firstDay; i++) {
-    days += `<div class="empty"></div>`;
+    days += `<div class="empty-day"></div>`;
 }
 
 for (let i=1; i<=lastDay; i++) {
