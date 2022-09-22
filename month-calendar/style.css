@@ -1,88 +1,78 @@
 * {
     margin: 0;
     padding: 0;
-    font-family: sans-serif;
     box-sizing: border-box;
 }
 
-.container {
-    width: 100%;
+body {
     height: 100vh;
-    background-color: salmon;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Courier New', Courier, monospace;
+    background-color: azure;
 }
 
 .calendar {
-    background-color: black;
-    color: lightgray;
+    border: 2px solid black;
     width: 450px;
-    height: 520px;
+    height: 500px;
+    background-color: black;
+    color: white;
     border-radius: 10px;
-    box-shadow: 4px 4px 8px rgba(0,0,0,4);
-    overflow: hidden;
+    box-shadow: 4px 4px 5px rgba(0,0,0,0.7);
 }
 
 .month {
-    width: 100%;
-    height: 120px;
-    background-color: lightseagreen;
+    background-color: white;
+    color: black;
+    font-size: 20px;
+    border: 4px solid black;
+    height: 100px;
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    text-align: center;
-    border-radius: 10px 10px 0 0;
+    gap: 8px;
 }
 
-.month h1 {
-    font-size: 30px;
-    font-weight: 400;
-    text-transform: uppercase;
-}
-
-.month p {
-    font-size: 16px;
-}
-
-.weekdays {
-    width: 100%;
+.week {
     height: 50px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.weekdays div {
-    font-size: 15px;
+.week div {
+    font-size: large;
     font-weight: bold;
-    letter-spacing: 1px;
+    height: 100%;
     width: 100%;
     display: flex;
-    align-items: center;
     justify-content: center;
+    align-items: center;
 }
 
 .days {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    padding: 2px;
+    height: 300px;
+    display: grid;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(6,1fr);
 }
 
 .days div {
-    font-size: 14px;
-    margin: 3px;
-    width: 57.5px;
-    height: 50px;
+    font-size: larger;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 
-.days div:hover:not(.empty) {
-    border: 2px solid gray;
-    cursor: pointer;
+.days div:hover:not(.empty-day) {
+    border: 1px solid white;
 }
 
-.today {
-    background-color: lightseagreen;
+.days .today {
+    background-color: white;
+    color: black;
+    border-radius: 2px;
 }
